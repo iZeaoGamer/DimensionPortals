@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace muqsit\dimensionportals\world;
 
 use pocketmine\utils\Utils;
-use pocketmine\world\World;
+use pocketmine\level\Level as World;
 
 final class WorldHolder{
 
