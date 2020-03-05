@@ -10,14 +10,12 @@ use muqsit\dimensionportals\world\WorldInstance;
 use muqsit\dimensionportals\world\WorldManager;
 use pocketmine\block\Block;
 use pocketmine\block\BlockFactory;
-use pocketmine\block\BlockLegacyIds;
-use pocketmine\block\VanillaBlocks;
 use pocketmine\item\Item;
 use pocketmine\math\Facing;
 use pocketmine\math\Vector3;
 use pocketmine\player\Player;
-use pocketmine\world\utils\SubChunkIteratorManager;
-use pocketmine\world\World;
+use pocketmine\level\utils\SubChunkIteratorManager;
+use pocketmine\level\Level as World;
 
 class NetherPortalExoBlock extends PortalExoBlock{
 
@@ -70,14 +68,14 @@ class NetherPortalExoBlock extends PortalExoBlock{
 
 	public function isValid(Block $block) : bool{
 		$blockId = $block->getId();
-		return $blockId === $this->frame_block_id || $blockId === BlockLegacyIds::PORTAL;
+		return $blockId === $this->frame_block_id || $blockId === Block::PORTAL;
 	}
 
 	public function fill(World $world, Vector3 $origin, int $metadata) : void{
 		$visits = new Queue([$origin]);
 
 		$iterator = new SubChunkIteratorManager($world);
-		$air = VanillaBlocks::AIR();
+		$air = Block::AIR;
 
 		while(!$visits->isEmpty()){
 			/** @var Vector3 $coordinates */
