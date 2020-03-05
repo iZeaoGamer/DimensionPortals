@@ -9,7 +9,7 @@ use muqsit\dimensionportals\event\player\PlayerPortalTeleportEvent;
 use muqsit\dimensionportals\exoblock\PortalExoBlock;
 use muqsit\dimensionportals\world\WorldManager;
 use pocketmine\entity\Location;
-use pocketmine\player\Player;
+use pocketmine\Player;
 
 final class PlayerInstance{
 
