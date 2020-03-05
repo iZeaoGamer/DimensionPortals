@@ -8,8 +8,6 @@ use InvalidArgumentException;
 use muqsit\dimensionportals\Loader;
 use pocketmine\block\Block;
 use pocketmine\block\BlockFactory;
-use pocketmine\block\BlockLegacyIds;
-use pocketmine\block\VanillaBlocks;
 use pocketmine\utils\Config;
 
 final class ExoBlockFactory{
@@ -26,7 +24,7 @@ final class ExoBlockFactory{
 
 	private static function initNether(Config $config) : void{
 		$frame_block = VanillaBlocks::fromString((string) $config->getNested("nether.portal.frame-block"));
-		if($frame_block->getId() === BlockLegacyIds::AIR){
+		if($frame_block->getId() === Block::AIR){
 			throw new InvalidArgumentException("Invalid nether portal frame block " . $config->get("nether.portal.frame-block"));
 		}
 
@@ -42,7 +40,7 @@ final class ExoBlockFactory{
 	}
 
 	private static function initEnd(Config $config) : void{
-		self::register(new EndPortalFrameExoBlock(), VanillaBlocks::END_PORTAL_FRAME());
+		self::register(new EndPortalFrameExoBlock(), Block::END_PORTAL_FRAME);
 		self::register(new EndPortalExoBlock($config->getNested("end.teleportation-duration")), BlockFactory::get(BlockLegacyIds::END_PORTAL));
 	}
 
