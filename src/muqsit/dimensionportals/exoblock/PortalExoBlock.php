@@ -6,7 +6,7 @@ namespace muqsit\dimensionportals\exoblock;
 
 use muqsit\dimensionportals\player\PlayerManager;
 use muqsit\dimensionportals\world\WorldInstance;
-use pocketmine\player\Player;
+use pocketmine\Player;
 
 abstract class PortalExoBlock implements ExoBlock{
 
