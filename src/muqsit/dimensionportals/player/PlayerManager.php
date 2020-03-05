@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace muqsit\dimensionportals\player;
 
 use muqsit\dimensionportals\Loader;
-use pocketmine\player\Player;
+use pocketmine\Player;
 use pocketmine\scheduler\ClosureTask;
 
 final class PlayerManager{
