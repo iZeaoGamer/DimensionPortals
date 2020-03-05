@@ -9,7 +9,7 @@ use muqsit\dimensionportals\world\end\EndWorldInstance;
 use muqsit\dimensionportals\world\nether\NetherWorldInstance;
 use muqsit\dimensionportals\world\overworld\OverworldInstance;
 use pocketmine\Server;
-use pocketmine\world\World;
+use pocketmine\level\Level as World;
 use RuntimeException;
 
 final class WorldManager{
