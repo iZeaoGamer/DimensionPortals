@@ -7,11 +7,11 @@ namespace muqsit\dimensionportals\world;
 use muqsit\dimensionportals\player\PlayerManager;
 use pocketmine\event\entity\EntityTeleportEvent;
 use pocketmine\event\Listener;
-use pocketmine\event\world\ChunkLoadEvent;
-use pocketmine\event\world\ChunkUnloadEvent;
-use pocketmine\event\world\WorldUnloadEvent;
+use pocketmine\event\level\ChunkLoadEvent;
+use pocketmine\event\level\ChunkUnloadEvent;
+use pocketmine\event\level\WorldUnloadEvent;
 use pocketmine\network\mcpe\protocol\ChangeDimensionPacket;
-use pocketmine\player\Player;
+use pocketmine\Player;
 
 final class WorldListener implements Listener{
 
