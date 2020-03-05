@@ -8,11 +8,9 @@ use muqsit\dimensionportals\event\DimensionPortalsEvent;
 use muqsit\dimensionportals\exoblock\PortalExoBlock;
 use pocketmine\entity\Location;
 use pocketmine\event\Cancellable;
-use pocketmine\event\CancellableTrait;
-use pocketmine\player\Player;
+use pocketmine\Player;
 
 class PlayerPortalTeleportEvent extends DimensionPortalsEvent implements Cancellable{
-	use CancellableTrait;
 
 	/** @var Player */
 	private $player;
