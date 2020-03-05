@@ -13,7 +13,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\player\PlayerItemUseEvent;
 use pocketmine\event\player\PlayerMoveEvent;
-use pocketmine\player\Player;
+use pocketmine\Player;
 
 final class PlayerDimensionChangeListener implements Listener{
 
