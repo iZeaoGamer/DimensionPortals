@@ -7,11 +7,9 @@ namespace muqsit\dimensionportals\event\player;
 use muqsit\dimensionportals\event\DimensionPortalsEvent;
 use muqsit\dimensionportals\exoblock\PortalExoBlock;
 use pocketmine\event\Cancellable;
-use pocketmine\event\CancellableTrait;
-use pocketmine\player\Player;
+use pocketmine\Player;
 
 class PlayerEnterPortalEvent extends DimensionPortalsEvent implements Cancellable{
-	use CancellableTrait;
 
 	/** @var Player */
 	private $player;
