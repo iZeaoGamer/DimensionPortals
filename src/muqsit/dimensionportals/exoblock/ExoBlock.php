@@ -6,7 +6,7 @@ namespace muqsit\dimensionportals\exoblock;
 
 use pocketmine\block\Block;
 use pocketmine\item\Item;
-use pocketmine\player\Player;
+use pocketmine\Player;
 
 /**
  * The fuck is an exo block?
