@@ -8,7 +8,6 @@ use pocketmine\block\Block;
 use pocketmine\block\BlockFactory;
 use pocketmine\block\BlockLegacyIds;
 use pocketmine\block\EndPortalFrame;
-use pocketmine\block\VanillaBlocks;
 use pocketmine\item\Item;
 use pocketmine\item\ItemFactory;
 use pocketmine\item\ItemIds;
@@ -98,7 +97,7 @@ class EndPortalFrameExoBlock implements ExoBlock{
 		$world = $pos->getWorld();
 		for($i = -1; $i <= 1; ++$i){
 			for($j = -1; $j <= 1; ++$j){
-				$world->setBlockAt($pos->x + $i, $pos->y, $pos->z + $j, BlockFactory::get(BlockLegacyIds::END_PORTAL), false);
+				$world->setBlockAt($pos->x + $i, $pos->y, $pos->z + $j, BlockFactory::get(Block::END_PORTAL), false);
 			}
 		}
 	}
@@ -120,8 +119,8 @@ class EndPortalFrameExoBlock implements ExoBlock{
 		$world = $pos->getWorld();
 		for($i = -1; $i <= 1; ++$i){
 			for($j = -1; $j <= 1; ++$j){
-				if($world->getBlockAt($pos->x + $i, $pos->y, $pos->z + $j)->getId() === BlockLegacyIds::END_PORTAL){
-					$world->setBlockAt($pos->x + $i, $pos->y, $pos->z + $j, VanillaBlocks::AIR(), false);
+				if($world->getBlockAt($pos->x + $i, $pos->y, $pos->z + $j)->getId() === Block::END_PORTAL){
+					$world->setBlockAt($pos->x + $i, $pos->y, $pos->z + $j, Block::AIR(), false);
 				}
 			}
 		}
