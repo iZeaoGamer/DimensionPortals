@@ -6,14 +6,13 @@ namespace muqsit\dimensionportals\exoblock;
 
 use pocketmine\block\Block;
 use pocketmine\block\BlockFactory;
-use pocketmine\block\BlockLegacyIds;
 use pocketmine\block\EndPortalFrame;
 use pocketmine\item\Item;
 use pocketmine\item\ItemFactory;
 use pocketmine\item\ItemIds;
 use pocketmine\math\Facing;
-use pocketmine\player\Player;
-use pocketmine\world\World;
+use pocketmine\Player;
+use pocketmine\level\Level as World;
 use ReflectionProperty;
 
 class EndPortalFrameExoBlock implements ExoBlock{
